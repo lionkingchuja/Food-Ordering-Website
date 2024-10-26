@@ -1,7 +1,7 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from "../utils/userContext";
+// import UserContext from "../utils/userContext";
 import {useSelector} from "react-redux";
 
 const Header=()=>{
@@ -15,7 +15,7 @@ const Header=()=>{
   // useEffect(() => {
   //   console.log(`useEffect Called`);
   // }, [btnNameReact]);
-  const { loggedInUser }=useContext(UserContext);
+  //  const { loggedInUser }=useContext(UserContext);
  
   // subscribing to the store using a selector
   const cartItems= useSelector((store) => store.cart.items);
@@ -31,7 +31,7 @@ const Header=()=>{
         </div>
         <div className="flex items-center">
           <ul className="flex p-4 m-4">
-            <li className="px-4">Online Status: {onlinestatus ? "✅":"🔴"}</li>
+            {/* <li className="px-4">Online Status: {onlinestatus ? "✅":"🔴"}</li> */}
             <li className="px-4 hover:bg-slate-400 border rounded-lg"><Link to="/">Home</Link></li>
             <li className="px-4 hover:bg-slate-400 border rounded-lg"><Link to="/about">About Us</Link></li>
             <li className="px-4 hover:bg-slate-400 border rounded-lg"><Link to="/contact">contact Us</Link></li>
@@ -45,7 +45,7 @@ const Header=()=>{
             >
               <h4>{name}</h4>
             </button>
-            <li className="px-4">{loggedInUser}</li>
+            {/* <li className="px-4">{loggedInUser}</li> */}
           </ul>
         </div>
       </div>

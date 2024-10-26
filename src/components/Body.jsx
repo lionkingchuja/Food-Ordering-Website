@@ -83,13 +83,13 @@ const Body=()=>{
           >
             Top Rated Restaurants
           </button>
-          <div>
+          {/* <div>
             <label>UserName:</label>
             <input className="px-2 h-9 mt-7 bg-slate-300 m-4 rounded-lg hover:bg-slate-400"
               value={loggedInUser}
               onChange={(e)=> setUserName(e.target.value)}
             />
-          </div>
+          </div> */}
         </div>
         <div className="flex flex-wrap justify-center">
           {/* <RestaurantCard resData={resList[0]}/>
